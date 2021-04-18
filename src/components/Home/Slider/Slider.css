@@ -1,0 +1,11 @@
+.carousel-inner {
+  height: 500px;
+  border-radius: 20px;
+}
+
+.item,
+img {
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 10px !important;
+}
