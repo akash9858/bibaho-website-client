@@ -8,7 +8,7 @@ const SimpleCardForm = ({ newService }) => {
 
     const handleOrder = (paymentId) => {
         const order = { ...newService, paymentId }
-        fetch('https://boiling-woodland-29013.herokuapp.com/bookOrder', {
+        fetch('https://peaceful-gorge-97236.herokuapp.com/bookOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json; charset=UTF-8',

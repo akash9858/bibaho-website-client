@@ -11,7 +11,7 @@ const MakeAdmin = () => {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        const url = 'https://boiling-woodland-29013.herokuapp.com/addAdmin'
+        const url = 'https://peaceful-gorge-97236.herokuapp.com/addAdmin'
         fetch(url, {
             method: 'POST',
             headers: {

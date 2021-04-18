@@ -10,7 +10,7 @@ const BookingList = () => {
     const [booking, setBooking] = useState([])
 
     useEffect(() => {
-        fetch(`https://boiling-woodland-29013.herokuapp.com/bookingList?data.email=+loggedInUser.email`)
+        fetch(`https://peaceful-gorge-97236.herokuapp.com/bookingList?data.email=+loggedInUser.email`)
             .then(res => res.json())
             .then(data => filteredOrder(data))
     }, [])

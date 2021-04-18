@@ -11,7 +11,7 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false)
     useEffect(() => {
-        const url = 'https://boiling-woodland-29013.herokuapp.com/isAdmin'
+        const url = 'https://peaceful-gorge-97236.herokuapp.com/isAdmin'
         fetch(url, {
             method: 'POST',
             headers: {

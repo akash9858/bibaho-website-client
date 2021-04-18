@@ -19,7 +19,7 @@ const AddReview = () => {
             imageURL: imageURL
         };
 
-        const url = `https://boiling-woodland-29013.herokuapp.com/addReview`
+        const url = `https://peaceful-gorge-97236.herokuapp.com/addReview`
 
         console.log(serviceDate)
 

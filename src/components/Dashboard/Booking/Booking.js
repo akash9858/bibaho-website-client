@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import { UserContext } from "../../../App";
 import PaymentProcess from "../PaymentProcess/PaymentProcess";
 import Sidebar from "../Sidebar/Sidebar";
@@ -12,7 +12,7 @@ const Booking = () => {
     const [serviceData, setServiceData] = useState({})
 
     useEffect(() => {
-        fetch(`https://boiling-woodland-29013.herokuapp.com/serviceBook/${id}`)
+        fetch(`https://peaceful-gorge-97236.herokuapp.com/serviceBook/${id}`)
             .then(res => res.json())
             .then(data => {
                 setServiceData(data);

@@ -19,41 +19,41 @@ export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <UserContext.Provider value ={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <PrivateRoute path="/service/:id">
-          <Booking/>
-        </PrivateRoute>
-        <Route path="/login">
-          <Login/>
-        </Route>
-        <PrivateRoute path="/addService">
-        <AddService/>
-        </PrivateRoute>
-        <PrivateRoute path="/dashboard">
-          <Dashboard/>
-        </PrivateRoute>
-        <PrivateRoute path="/bookingList">
-          <BookingList/>
-        </PrivateRoute>
-        <PrivateRoute path="/addReview">
-          <AddReview/>
-        </PrivateRoute>
-        <PrivateRoute path="/makeAdmin">
-          <MakeAdmin/>
-        </PrivateRoute>
-        <PrivateRoute path="/orderList">
-          <OrderList/>
-        </PrivateRoute>
-        <PrivateRoute path="/manageService">
-          <ManageService/>
-        </PrivateRoute>
-      </Switch>
-    </Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <PrivateRoute path="/service/:id">
+            <Booking />
+          </PrivateRoute>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <PrivateRoute path="/addService">
+            <AddService />
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/bookingList">
+            <BookingList />
+          </PrivateRoute>
+          <PrivateRoute path="/addReview">
+            <AddReview />
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin />
+          </PrivateRoute>
+          <PrivateRoute path="/orderList">
+            <OrderList />
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService />
+          </PrivateRoute>
+        </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }

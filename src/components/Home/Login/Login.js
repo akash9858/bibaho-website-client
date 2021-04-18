@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Login.css';
 import { createUserWithEmailAndPassword, SignInUserWithEmailAndPassword, googleSignIn, initializeLogin } from './LoginManager';
@@ -21,9 +21,12 @@ const Login = () => {
 
     const history = useHistory();
     const location = useLocation();
-    const { from } = location.state || { from: {
-        pathname: "/" } };
-    
+    const { from } = location.state || {
+        from: {
+            pathname: "/"
+        }
+    };
+
     const handleResponse = (res, redirect) => {
         setUser(res)
         setLoggedInUser(res)
@@ -37,10 +40,10 @@ const Login = () => {
         googleSignIn()
             .then(res => {
                 handleResponse(res, true)
-        })
+            })
     }
     const handleSubmit = (event) => {
-        if (newUser && user.email && user.password){
+        if (newUser && user.email && user.password) {
             createUserWithEmailAndPassword(user.name, user.email, user.password)
                 .then(res => {
                     handleResponse(res, true);

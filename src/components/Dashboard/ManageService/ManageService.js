@@ -12,7 +12,7 @@ const ManageService = () => {
 
     // const handleDelete = (id) => {
     //     console.log("ID:", id)
-    //     fetch(`https://boiling-woodland-29013.herokuapp.com/service/${id}`, {
+    //     fetch(`https://peaceful-gorge-97236.herokuapp.com/service/${id}`, {
     //         method: "DELETE"
     //     })
 
@@ -24,7 +24,7 @@ const ManageService = () => {
     // Niam vai 
 
     useEffect(() => {
-        fetch('https://boiling-woodland-29013.herokuapp.com/services')
+        fetch('https://peaceful-gorge-97236.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setManageService(data);
@@ -32,7 +32,7 @@ const ManageService = () => {
     }, [])
 
     const handleDelete = id => {
-        id && fetch(`https://boiling-woodland-29013.herokuapp.com/services/${id}`, {
+        id && fetch(`https://peaceful-gorge-97236.herokuapp.com/services/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'
